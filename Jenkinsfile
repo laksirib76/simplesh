@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'sltest'
+    }
+
+  }
   stages {
     stage('init') {
       steps {
