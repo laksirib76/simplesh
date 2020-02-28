@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'echo "hello"'
+        sh '''echo "hello"
+ping -c 4 localhost'''
       }
     }
 
