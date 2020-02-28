@@ -15,7 +15,7 @@ ping -c 5 localhost'''
 
     stage('Test') {
       steps {
-        sh 'echo "hello 3"'
+        sh 'echo "hello 4"'
       }
     }
 
