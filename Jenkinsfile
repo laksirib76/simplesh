@@ -1,23 +1,10 @@
 pipeline {
-  agent {
-    node {
-      label 'sltest'
+    agent { docker { image 'ruby' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'ruby --version'
+            }
+        }
     }
-
-  }
-  stages {
-    stage('init') {
-      steps {
-        sh '''echo "hello"
-ping -c 5 localhost'''
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh 'echo "hello 5"'
-      }
-    }
-
-  }
 }
